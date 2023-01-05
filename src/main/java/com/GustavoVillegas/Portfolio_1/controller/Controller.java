@@ -47,6 +47,12 @@ public class Controller {
     return persoServ.verPersonas();
     }
     
+       @GetMapping ("/ver/persona/{id}")
+       @ResponseBody
+       public Persona verPersona(@PathVariable long id){
+       return persoServ.verPersona(id);    
+    }
+    
     @DeleteMapping ("/delete/{id}")
     public void borrarPersona(@PathVariable long id) {
         persoServ.borrarPersona(id);

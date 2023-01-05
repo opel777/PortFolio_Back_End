@@ -14,7 +14,7 @@ public interface IPersonaService {
     
     public void borrarPersona ( Long id);
     
-    public Persona BuscarPersona ( Long id);
+    public Persona verPersona ( Long id);
     
     public void agregarExperiencia ( Experience exp, Persona per);
     
