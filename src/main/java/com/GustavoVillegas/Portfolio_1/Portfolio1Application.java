@@ -25,3 +25,4 @@ public class Portfolio1Application {
     }
 
 }
+/* la carpeta gitignore no debe tener la carpeta target ignorada*/
