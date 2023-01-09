@@ -1,6 +1,5 @@
 
-FROM openjdk:8.0-jdk-slim-strech
-RUN apt-get install -y tzdata
-ENV TZ America/Argentina
-VOLUME ["/Portfolio_1-0.0.1-SNAPSHOT.jar"] 
-ENTRYPOINT ["java","-jar","-Dspring.profiles.active=release", "/Portfolio_1-0.0.1-SNAPSHOT.jar"]
+FROM amazoncorretto:8-alpine-jdk
+MAINTAINER Gustavo
+COPY target/Portfolio_1-0.0.1-SNAPSHOT.jar Portfolio_1-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java","-jar","/Portfolio_1-0.0.1-SNAPSHOT.jar"]
