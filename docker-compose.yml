@@ -15,7 +15,7 @@ services:
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
       - SPRING_JPA_SHOW_SQL=true
     ports:
-      - 3306:3306
+      - 8080:8080
           
   db:
     image: 'mysql:8.0.30'
