@@ -19,7 +19,7 @@ public class Portfolio1Application {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**").allowedOrigins("https://gustavovillegas-portfolio.netlify.app","http://localhost:4200","https://gustavo-villegas.web.app/").allowedMethods("*").allowedHeaders("*");
+                registry.addMapping("/**").allowedOrigins("https://gustavovillegas-portfolio.netlify.app","http://localhost:4200","https://gustavo-villegas-portfolio.web.app/").allowedMethods("*").allowedHeaders("*");
             }
         };
     }
