@@ -16,10 +16,20 @@ public interface IPersonaService {
     
     public Persona verPersona ( Long id);
     
+    public void modifPersona( Persona per);
+    
+    public Boolean login(String password, String email);
+    
     public void agregarExperiencia ( Experience exp, Persona per);
+    
+    public void borrarExperiencia (Experience exp, Persona per);
     
     public void agregarEducacion ( Education educ, Persona per);
     
+    public void borrarEducacion (Education educ, Persona per);
+    
     public void agregarProyecto ( Proyecto proy, Persona per);
+    
+    public void borrarProyecto (Proyecto proy, Persona per);
     
 }

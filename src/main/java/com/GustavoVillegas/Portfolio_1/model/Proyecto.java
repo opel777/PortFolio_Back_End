@@ -34,4 +34,7 @@ public class Proyecto {
         this.end = end;
         this.descriptionPosition = descriptionPosition;
     }
+     public boolean equals(Proyecto proy){
+        return this.getId().equals(proy.getId());
+    }
     }

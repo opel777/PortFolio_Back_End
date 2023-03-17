@@ -39,4 +39,7 @@ public class Education {
         this.descriptionPosition = descriptionPosition;
         
     }
+     public boolean equals(Education educ){
+        return this.getId().equals(educ.getId());
+    }
 }

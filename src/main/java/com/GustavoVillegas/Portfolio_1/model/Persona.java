@@ -21,6 +21,8 @@ public class Persona {
      
 
     private Long id;
+    private String email;
+    private String password;
     private String name;
     private String lastName;
     private String image;
@@ -43,9 +45,11 @@ public class Persona {
     public Persona(){
     }
     
-    public Persona (Long id, String name, String lastName, String image, String position, String img, String about){
+    public Persona (Long id, String email, String password,String name, String lastName, String image, String position, String img, String about){
         
         this.id = id;
+        this.email=email;
+        this.password=password;
         this.name = name;
         this.lastName = lastName;
         this.image = image;
@@ -60,10 +64,36 @@ public class Persona {
     public void addExperience(Experience exp){
         this.experience.add(exp);
     }
+    public void deleteExperience(Experience exp){
+        for (Experience aux : this.experience){
+            if(aux.equals(exp)){
+                this.experience.remove(exp);
+                break;
+            }
+        }
+    }
     public void addEducation(Education educ){
         this.education.add(educ);
-    }  
+    } 
+    public void deleteEducation(Education educ){
+        for (Education aux : this.education){
+            if(aux.equals(educ)){
+                this.education.remove(educ);
+                break;
+            }
+        }
+    }
     public void addProyecto(Proyecto proy){
         this.proyecto.add(proy);
     } 
+    
+    public void deleteProyecto(Proyecto proy){
+        for (Proyecto aux : this.proyecto){
+            if(aux.equals(proy)){
+                this.proyecto.remove(proy);
+                break;
+            }
+        }
+    }
+    
 }

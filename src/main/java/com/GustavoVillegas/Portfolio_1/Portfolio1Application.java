@@ -19,10 +19,10 @@ public class Portfolio1Application {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**").allowedOrigins("http://localhost:4200").allowedMethods("*").allowedHeaders("*");
+                registry.addMapping("/**").allowedOrigins("https://gustavovillegas-portfolio.netlify.app","http://localhost:4200","https://gustavo-villegas-portfolio.web.app/").allowedMethods("*").allowedHeaders("*");
             }
         };
     }
-    
 
 }
+/* la carpeta gitignore no debe tener la carpeta target ignorada*/

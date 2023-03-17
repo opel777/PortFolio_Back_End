@@ -36,8 +36,10 @@ public class Experience {
         this.position1 = position1;
         this.start = start;
         this.end = end;
-        this.descriptionPosition = descriptionPosition;
-        
-        
+        this.descriptionPosition = descriptionPosition;   
+    }
+    
+    public boolean equals(Experience exp){
+        return this.getId().equals(exp.getId());
     }
 }

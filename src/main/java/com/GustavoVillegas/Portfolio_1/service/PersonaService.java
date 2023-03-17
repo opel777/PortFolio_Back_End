@@ -48,10 +48,21 @@ public class PersonaService implements IPersonaService{
     }
     
     @Override
+    public void modifPersona(Persona per) {
+         persoRepo.save(per);
+    }
+    
+    @Override
     public void agregarExperiencia(Experience exp, Persona per){
         Experience exp_id = expServ.crearExperiencia(exp);
         per.addExperience(exp_id);
         persoRepo.save(per);
+    }
+    @Override
+    public void borrarExperiencia(Experience exp,Persona per){
+        per.deleteExperience(exp);
+        persoRepo.save(per);
+        expServ.borrarExperiencia(exp);
     }
     
     @Override
@@ -60,6 +71,12 @@ public class PersonaService implements IPersonaService{
         per.addEducation(educ_id);
         persoRepo.save(per);
     }
+    @Override
+    public void borrarEducacion(Education educ,Persona per){
+        per.deleteEducation(educ);
+        persoRepo.save(per);
+        educServ.borrarEducacion(educ);
+    }
     
     @Override
     public void agregarProyecto(Proyecto proy, Persona per){
@@ -67,4 +84,17 @@ public class PersonaService implements IPersonaService{
         per.addProyecto(proy_id);
         persoRepo.save(per);
     }
+    
+    @Override
+    public void borrarProyecto(Proyecto proy,Persona per){
+        per.deleteProyecto(proy);
+        persoRepo.save(per);
+        proyServ.borrarProyecto(proy);
+    }
+
+     @Override
+   public Boolean login(String password, String email){
+       Boolean response = persoRepo.existsByPasswordAndEmail(password, email);
+       return response;
+   }
 }
